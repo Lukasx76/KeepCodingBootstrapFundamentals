@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards and Panels</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <!-- A card occupying the whole screen. This behavior it is the default behavior for every card unless you specify the width that the card should have otherwise it will occupy the whole size of the parent component-->
+            <div class="card" style="width: 15rem;">
+                <img src="https://cdn.meutimao.com.br/_upload/torcida-do-corinthians/g/300w/823/zeca-urubu-823181.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="cart-text">Buzz buzard. Some quick example text to build on the card title and make up the bulk of the card's content(excerpted from the docs).</p>
+                    <button class="btn btn-primary">Click me</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="my-5">
+
+            <!-- A card also can have a subtitle and links-->
+            
+            <div class="card" style="width: 15rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Title</h5>
+                    <h6 class="cart-subtitle mb text-muted">Subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="my-5">
+            <!-- A card also can have a list of items-->
+
+            <div class="card" style="width: 15rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Item 1</li>
+                    <li class="list-group-item">Item 2</li>
+                    <li class="list-group-item">Item 3</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="my-5">
+            <!-- Card with header and footer and with quote style-->
+            <div class="card">
+                <div class="card-header">
+                  Quote
+                </div>
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0">
+                    <p>The two most important days in your life are the day you are born and the day you find out why.</p>
+                    <footer class="blockquote-footer"><cite title="Source Title">Mark twain</cite></footer>
+                  </blockquote>
+                </div>
+              </div>
+        </div>
+
+        <div class="my-5">
+            <!-- Card with navigation-->
+            <div class="card text-center">
+                <div class="card-header">
+                  <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="true" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    
+</body>
+</html>
