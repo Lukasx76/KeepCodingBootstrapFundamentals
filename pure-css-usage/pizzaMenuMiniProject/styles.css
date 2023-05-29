@@ -50,7 +50,7 @@ li a:visited {
 
 li a:hover,
 li a:focus {
-    background: #da3333;
+    background: #333;
     color: #ffffff;
     cursor: pointer;
 }
