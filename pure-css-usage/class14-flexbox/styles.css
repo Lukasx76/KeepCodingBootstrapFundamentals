@@ -31,7 +31,7 @@ body {
     color: #fff;
     border: 2px solid #ff0000;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex: 1 1 50px
 }
