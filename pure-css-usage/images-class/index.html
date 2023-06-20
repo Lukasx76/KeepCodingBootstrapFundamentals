@@ -7,17 +7,40 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="hero">
-            <figure class="profile-pic-figure">
-                <img src="https://i.pinimg.com/originals/36/60/58/366058cd421e6a981e50c6f800abbbd0.png" alt="batman" width="300" height="300" title="Profile picture">
-                <figcaption class="ignore">
-                    Batman
-                </figcaption>
+    <script>
+        function changeImageAndText(newImageUrl, newText) {
+            let profilePic = document.getElementById('profile-pic');
+            let heroName = document.querySelector('header h1');
+            profilePic.src = newImageUrl;
+            heroName.textContent = newText;
+
+            // show the hidden elements
+            var figure = document.querySelector('.profile-pic-figure');
+            let header = document.querySelector('header h1');
+            figure.classList.remove('hidden');
+            header.classList.remove('hidden');
+        }
+    </script>
+    <header class="header el">
+        <section class="batman">
+            <figure class="profile-pic-figure hidden">
+                <img id="profile-pic" width="300" height="300" title="Profile picture">
             </figure>
-            <h1 class="h1">
-                <span class="nowrap">I'm vengeance</span>
-                <span class="nowrap">I'm batman</span>
-            </h1>
-    </section>
+        </section>
+        <h1 class="hidden"></h1>
+        <nav class="hero-names">
+            <ul>
+                <a href="#" onclick="changeImageAndText('https://i.pinimg.com/originals/36/60/58/366058cd421e6a981e50c6f800abbbd0.png', 'Batman')">Batman</a>
+                <a href="#" onclick="changeImageAndText('https://wallpapers-clan.com/wp-content/uploads/2022/11/superman-pfp-14.jpg', 'Superman')">Superman</a>
+                <a href="#" onclick="changeImageAndText('https://www.skinit.com/media/catalog/product/cache/9dbe6a0c16a5b581719a1aa389879cfc/w/o/wonder06_60.jpg', 'Wonder Woman')">Wonder Woman</a>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="box">1</div>
+    </main>
+    <aside class="sidebar el"><h2>Sidebar</h2></aside>
+    <footer class="footer el"><h2>Footer</h2></footer>
+
 </body>
 </html>
