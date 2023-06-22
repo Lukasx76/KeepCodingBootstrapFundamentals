@@ -33,16 +33,16 @@ body {
     justify-content: space-around;
     align-items: center;
     background-image: url("https://static.vecteezy.com/system/resources/previews/001/987/748/original/abstract-template-blue-geometric-diagonal-overlap-layer-on-dark-blue-background-free-vector.jpg"); 
-    border-bottom: 2px solid #000000;
+    /* border-bottom: 2px solid #000000; */
     padding: 20px;
     gap: 30px;
 }
 
 .profile-pic-figure img {
     max-height: 70px;
-    width: auto;
+    width: 100%;
     min-width: auto;
-    border: 1px solid #000000;
+    /* border: 1px solid #000000; */
     border-radius: 50%;
 }
 
@@ -85,9 +85,12 @@ body {
     padding: 0.5rem;
     display: grid;
 }
+.box img {
+    height: auto;
+}
 
 .box:first-child {
-    background-color: #00f;
+    /* background-color: #00f; */
     display: grid;
     grid-column: 1 / 6;
     grid-row: 1 / 3;
