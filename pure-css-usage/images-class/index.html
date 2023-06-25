@@ -27,10 +27,54 @@
             box.appendChild(wallpaperImg);
 
             // Show the hidden elements
-            var figure = document.querySelector('.profile-pic-figure');
+            let figure = document.querySelector('.profile-pic-figure');
             let header = document.querySelector('header h1');
             figure.classList.remove('hidden');
             header.classList.remove('hidden');
+
+            let aside = document.querySelector('aside');
+            aside.innerHTML = ''; // Clear the previous content
+
+            // Create an array of superpowers for each hero
+            let superpowers = {
+                Batman: [
+                    'Genius-level intellect',
+                    'Expert detective',
+                    'Master martial artist',
+                    'Master tactician',
+                    'Peak human physical condition'],
+                Superman: [
+                    'Superhuman strength',
+                    'Superhuman vision',
+                    'Superhuman breath',
+                    'Superhuman speed',
+                    'Flight'],
+                WonderWoman: [
+                    'Superhuman strength', 
+                    'Superhuman speed', 
+                    'Regenerative healing factor',
+                    'Immortality',
+                    'Energy absorption and projection'
+                ],
+            };
+
+            // Retrieve the superpowers based on the selected hero
+            let selectedHero = newText;
+            let selectedPowers = superpowers[selectedHero];
+
+            // Create the new list of superpowers
+            let ul = document.createElement('ul');
+            selectedPowers.forEach((power) => {
+                let li = document.createElement('li');
+                li.textContent = power;
+                ul.appendChild(li);
+            });
+
+            aside.appendChild(document.createElement('h2'));
+            aside.appendChild(ul);
+
+            // Set the text content of the <h2> tag
+            aside.querySelector('h2').textContent = 'Superpowers';
         }
     </script>
     <header class="header el">
@@ -42,9 +86,9 @@
         <h1>Justice league members</h1>
         <nav class="hero-names">
             <ul>
-                <a href="#" onclick="changeImageAndText('https://i.pinimg.com/originals/36/60/58/366058cd421e6a981e50c6f800abbbd0.png', 'Batman', 'https://cdn.wallpapersafari.com/76/69/7UkLGv.jpg')">Batman</a>
-                <a href="#" onclick="changeImageAndText('https://wallpapers-clan.com/wp-content/uploads/2022/11/superman-pfp-14.jpg', 'Superman', 'https://moewalls.com/wp-content/uploads/2023/01/superman-arena-of-valor-thumb.jpg')">Superman</a>
-                <a href="#" onclick="changeImageAndText('https://www.skinit.com/media/catalog/product/cache/9dbe6a0c16a5b581719a1aa389879cfc/w/o/wonder06_60.jpg', 'Wonder Woman', 'https://images3.alphacoders.com/607/607410.jpg')">Wonder Woman</a>
+                <a href="#" onclick="changeImageAndText('https://i.pinimg.com/originals/36/60/58/366058cd421e6a981e50c6f800abbbd0.png', 'Batman', 'https://cdn.wallpapersafari.com/76/69/7UkLGv.jpg'); return false">Batman</a>
+                <a href="#" onclick="changeImageAndText('https://wallpapers-clan.com/wp-content/uploads/2022/11/superman-pfp-14.jpg', 'Superman', 'https://moewalls.com/wp-content/uploads/2023/01/superman-arena-of-valor-thumb.jpg'); return false">Superman</a>
+                <a href="#" onclick="changeImageAndText('https://www.skinit.com/media/catalog/product/cache/9dbe6a0c16a5b581719a1aa389879cfc/w/o/wonder06_60.jpg', 'WonderWoman', 'https://images3.alphacoders.com/607/607410.jpg'); return false">Wonder Woman</a>
             </ul>
         </nav>
     </header>
@@ -53,7 +97,9 @@
             <img id="wallpaper-img" src="https://images.alphacoders.com/241/thumb-1920-241901.jpg" title="Wallpaper picture" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
     </main>
-    <aside class="sidebar el"><h2>Sidebar</h2></aside>
+    <aside class="sidebar el">
+        <h2>Superpowers</h2>
+    </aside>
     <footer class="footer el"><h2>Footer</h2></footer>
 </body>
 </html>

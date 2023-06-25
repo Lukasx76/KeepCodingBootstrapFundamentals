@@ -62,7 +62,12 @@ body {
 
 .sidebar {
     grid-area: sb;
-    background-color: #7700ff;
+    background-color: #0e001f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .footer {
@@ -103,5 +108,3 @@ img {
 .nowrap {
     white-space: nowrap;
 }
-
-
