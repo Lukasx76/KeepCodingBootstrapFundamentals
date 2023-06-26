@@ -59,12 +59,12 @@ body {
     display: flex;
     justify-content: center;
     text-decoration: none;
-    color: #b81717;
+    color: #2600ff;
     font-weight: bold;
 }
 
 .hero-names ul a:hover {
-    color: rgb(72, 47, 163);
+    color: rgb(147, 117, 255);
 }
 
 .sidebar {
@@ -83,13 +83,13 @@ body {
 }
 
 .footer a {
-    text-decoration: none;
-    color: #b81717;
+    text-decoration: none;  
+    color: #2600ff;
     font-weight: bold;
 }
 
 .footer a:hover {
-    color: rgb(72, 47, 163);
+    color: rgb(191, 173, 255);
 }
 
 .container {
