@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 1.5rem 'Franklin Gothic Medium', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+header, footer {
+    position: sticky;
+    background-color: #a72525;
+}
+
+header, nav, main, footer {
+    display: grid;
+    place-content: center;
+}
+
+main {
+    flex-grow: 1;
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+}
+
+/* FOR SMALL SCREEN */
+@media screen and (min-width: 575px){
+    main {
+        background-image: linear-gradient(rgba(0, 255, 0, 0.5), rgba(0, 255, 255, 0.5));
+    }
+}
+
+/* FOR MEDIUM SCREEN */
+@media screen and (min-width: 768px){
+    main {
+        background-image: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 255, 0, 0.5));
+    }
+}
+
+/* FOR LARGE SCREEN */
+@media screen and (min-width: 992px){
+    main {
+        background-image: linear-gradient(rgba(0, 255, 0, 0.5), rgba(0, 0, 255, 0.5));
+    }
+}
+
+/* FOR XLARGE SCREEN */
+@media screen and (min-width: 1200px){
+    main {
+        background-image: linear-gradient(rgba(0, 255, 255, 0.5), rgba(255, 255, 0, 0.5));
+    }
+}
+
+/* FOR 2XLARGE SCREEN */
+@media screen and (min-width: 1400px){
+    main {
+        background-image: linear-gradient(rgba(255, 255, 0, 0.5), rgba(255, 0, 255, 0.5));
+    }
+}
+
+/* FOR LANDSCAPE SCREEN */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 16/4){
+    main {  
+        background-image: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 255, 0.5));
+    }
+}
