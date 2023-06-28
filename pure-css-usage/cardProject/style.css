@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: 1.5rem 'Franklin Gothic Medium', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    position: sticky;
+    background-color: #ff5f5f;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem;
+    font-weight: bolder;
+    border-bottom: 2px solid #000;
+}
+
+nav a, 
+nav a:visited {
+    color: #eeeeee;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+    color: hsla(0, 100%, 22%, 0.863);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    align-items: center;
+    background-image: linear-gradient(rgba(255, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+}
+
+.card {
+    scroll-margin-top: 8rem;
+    width: min(100%, 350px);
+    background-color: #cbd5e1;
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card figure {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.card img {
+    border: 3.5px solid #3a0000;
+    border-radius: 50%;
+}
+
+.card figcaption {
+    font-weight: bolder;
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+/* FOR SMALL SCREEN */
+@media screen and (min-width: 575px){
+    main {
+        background-image: linear-gradient(rgba(0, 255, 0, 0.5), rgba(0, 255, 255, 0.5));
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    .card {
+        width: min(100%, 400px);
+    }
+    .card:last-child {
+        order: -1;
+    }
+}
+
+/* FOR MEDIUM SCREEN */
+@media screen and (min-width: 768px){
+    nav {
+        display: none;
+    }
+
+    .card {
+        width: min(100%, 325px);
+    }
+
+    .card figure {
+        flex-flow: column-reverse;
+    }
+
+    .card figcaption {
+        margin: 0.1em 0;
+    }
+
+    .card p {
+        margin-top: 1rem;
+    }
+}
+
+/* FOR LARGE SCREEN */
+@media screen and (min-width: 992px){
+    .card {
+        width: min(100%, 400px);
+    }
+
+    .card:nth-child(2) {
+        order: -1;
+    }
+}
+
+/* FOR XLARGE SCREEN */
+@media screen and (min-width: 1200px){
+    .card {
+        width: min(calc(33% - 1rem), 500px);
+    }
+}
+
+/* FOR 2XLARGE SCREEN */
+@media screen and (min-width: 1400px){
+    main {
+        background-image: linear-gradient(rgba(255, 255, 0, 0.5), rgba(255, 0, 255, 0.5));
+    }
+}
+
+/* FOR LANDSCAPE SCREEN */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 16/4){
+    main {  
+        background-image: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 255, 0.5));
+    }
+}
